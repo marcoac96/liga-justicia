@@ -1,18 +1,16 @@
 
-const tasa  = 15;
+const tasa  = 1;
 const years = 20;
-let dinero  = 200000;
+let dinero  = 100000;
 
 const calcularInteresCompuesto = ( tasa, dinero, years ) => {
     
-    let rendimiento;
-
     for (let i = 1; i <= years; i++) {
-        rendimiento = dinero * tasa /100;
+        let rendimiento = dinero * tasa /100;
         dinero = dinero + rendimiento;
         let dineroD = dinero.toFixed(2);
         let dineroM = dinero.toLocaleString("en");
-        console.log(` año: ${ i } - dinero: $${ dineroM } `);
+        console.log(` año: ${ i } - ganancia: ${ rendimiento.toFixed(2) } - dinero: $${ dineroM } `);
     }
 }
     
